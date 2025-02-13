@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>{{ title }}</h1>
+        <input id="in" v-model="title" type="text">
+        <button @click="getText">Получить текст</button>
+    </div>
+
+    <script>
+        const ap = new Vue({ 
+            el: '#app', 
+            data: { 
+                title: 'Method',
+            },
+            methods: {
+                getText(){
+                    console.log(`Текст в поле: ${this.title}`);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
